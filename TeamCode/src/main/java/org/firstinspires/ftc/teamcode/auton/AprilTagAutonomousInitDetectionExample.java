@@ -23,13 +23,13 @@ package org.firstinspires.ftc.teamcode.auton;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import com.qualcomm.robotcore.hardware.DcMotor;
 
 import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
 import org.openftc.apriltag.AprilTagDetection;
 import org.openftc.easyopencv.OpenCvCamera;
 import org.openftc.easyopencv.OpenCvCameraFactory;
 import org.openftc.easyopencv.OpenCvCameraRotation;
-import org.openftc.easyopencv.OpenCvInternalCamera;
 
 import java.util.ArrayList;
 
@@ -59,6 +59,14 @@ public class AprilTagAutonomousInitDetectionExample extends LinearOpMode
     int middle=2;
     int right=3;
     AprilTagDetection tagOfInterest = null;
+
+    //initialize motors
+    DcMotor frontL = hardwareMap.get(DcMotor.class, "FrontL");
+    DcMotor backL = hardwareMap.get(DcMotor.class, "BackL");
+    DcMotor frontR = hardwareMap.get(DcMotor.class, "FrontR");
+    DcMotor backR = hardwareMap.get(DcMotor.class, "BackR");
+
+    int motorPosition=90;
 
     @Override
     public void runOpMode()
@@ -169,6 +177,11 @@ public class AprilTagAutonomousInitDetectionExample extends LinearOpMode
         /* Actually do something useful */
         if(tagOfInterest == null || tagOfInterest.id == left){
             //trajectory
+            frontR.setTargetPosition(motorPosition);
+            frontL.setTargetPosition(motorPosition);
+            backR.setTargetPosition(motorPosition);
+            backL.setTargetPosition(motorPosition);
+
         }else if(tagOfInterest.id == middle){
             //trajectory
         } else{

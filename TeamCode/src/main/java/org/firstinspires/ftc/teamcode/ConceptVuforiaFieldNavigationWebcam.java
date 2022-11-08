@@ -27,7 +27,7 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package org.firstinspires.ftc.robotcontroller.external.samples;
+package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
@@ -92,7 +92,7 @@ public class ConceptVuforiaFieldNavigationWebcam extends LinearOpMode {
      * and paste it in to your code on the next line, between the double quotes.
      */
     private static final String VUFORIA_KEY =
-            " --- YOUR NEW VUFORIA KEY GOES HERE  --- ";
+            "AeUTw67/////AAABmdmWqaWxQEDSlkno8XQ2iOE4t1a5N0j7JzJlQAn3QTee8BvbvEnXlug7WFcrI5BEWODvE5KaGkdSMigfYB6Aj3C4AI1OncASC6qKgc0bO/p+pLsnJwaHEFGJf64Tkorp7d3OWbrHpnciONP5LaYP+l9xYOAND+NfwOAUXrQvXnj/MYBjcFB8Vf0LT+FVtwUDg5eKLxvtjay2iqEeUCfu6LHOM6j6xZMyWAQGoSwd6GRxUtNgBF2rHxiQsu3ohAf0N587P4EZ6T9pEpCA+PsEaSByRDkY3gVO4KgRH0g/4kTi1QvP43X6ZQLw6ONsTpHCuGepjYsLrU/FGwP1eA582d01bR57xLDmFXMKNLaUqbYn\n";
 
     // Since ImageTarget trackables use mm to specifiy their dimensions, we must use mm for all the physical dimension.
     // We will define some constants and conversions here
